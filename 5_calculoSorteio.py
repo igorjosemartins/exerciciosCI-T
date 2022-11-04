@@ -35,4 +35,5 @@ def calcula_porcentagem_sorteio(assinante, minutos_assistidos):
       porcentagem[i] = round(porcentagem[i] * 100 / total)
    
    return print(porcentagem)
+
 calcula_porcentagem_sorteio([True, False], [33, 33])
