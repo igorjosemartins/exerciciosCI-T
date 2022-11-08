@@ -1,3 +1,4 @@
+
 # Sua equipe está trabalhando em um app de streaming de músicas e uma das funcionalidades é criar um embaralhador de músicas. 
 # Uma pesquisa feita pela equipe de UX (experiência do usuário) mostrou que essa é uma das funcionalidades mais importantes 
 # para os usuários e por isso foi priorizada a criação de um experimento para testar a melhor solução.
@@ -14,16 +15,38 @@
 
 def shuffle_musicas(musicas_tocadas):
 
-   shuffle = musicas_tocadas
+   musicas = musicas_tocadas
 
-   valor = -1
-   for i in range (len(shuffle)):
-      if i != len(shuffle) - 1:
-         if shuffle[i] < shuffle[i+1]:
-            shuffle[i] = shuffle[i+1]
+   if(len(musicas_tocadas) < 2):
+      return musicas_tocadas
+   
+   # ordenando decrescente
+   musicas.sort(reverse=True)
+   # print(musicas)
+
+   size = len(musicas) - 1
+   
+   result = []
+
+   for i in range(size):
+      if len(result) == len(musicas):
+         break
+      
+      # se for ímpar
+      if(len(musicas) % 2 != 0):
+         result.append(musicas[i])
+         result.append(musicas[size])
+         size -= 1
+         
+         if(len(result) == len(musicas) - 1):
+            result.append(musicas[size])
+            break
+         
       else:
-         continue
+         result.append(musicas[i])
+         result.append(musicas[size])
+         size -= 1
+   # print(result)
+   return result
 
-   print(shuffle)
-
-shuffle_musicas([2, 10, 5, 3])
+shuffle_musicas([5, 1, 4, 2, 3])

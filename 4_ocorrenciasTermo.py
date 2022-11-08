@@ -46,9 +46,8 @@ def calcula_top_ocorrencias_de_queries(texto,queries,k):
          if i == len(arrayQtd) - 1:
             result.append(arrayTermos[index]) 
             arrayQtd[index] = -1
-
-   
-   return result
+            
+   return print(result)
   
 
 calcula_top_ocorrencias_de_queries("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua", ["a", "em", "i", "el"], 2)
