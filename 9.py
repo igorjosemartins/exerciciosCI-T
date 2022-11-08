@@ -19,14 +19,6 @@
 # Nesse caso, o resultado será “sem resposta"
 
 
-
-   # transformar a string em um array, separando cada caracter [✅]
-   # percorrer o array, *logica* []
-   # condição de mesmo elemento (repetição)
-   # juntar todos os elementos do array, para formar uma nova string []
-   # retornar esta string []
-
-
 # TESTS: 
 
 # "Qualified" => "Qualiidef"
