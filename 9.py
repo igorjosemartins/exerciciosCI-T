@@ -46,36 +46,38 @@ def menor_string_maior(name):
    stringB = list(name)
    aux = ""
    
+   if(len(stringB) <= 1):
+         return print("sem resposta")
+         #return "sem resposta"
+   elif(len(stringB) == 2 and stringB[0] >= stringB[1]):
+         return print("sem resposta")
+         #return "sem resposta"
    
    for i in range(len(stringB) + 1):
 
-      if(len(stringB) == 0):
-         return print("sem resposta")
-      
-      elif(len(stringB) == 2 and stringB[i] > stringB[i + 1]):
-         return print("sem resposta")
-      
-      else:
-         if i == len(stringB) - 1:
+      if i == len(stringB) - 1:
             
-            if(stringB[i] == stringB[i - 1]):
-               
-               aux = stringB[i - 2]
-               stringB[i - 2] = stringB[i - 1]
-               stringB[i - 1] = aux
+            # se a ultima for igual a penúltima
+         if(stringB[i] == stringB[i - 1]):
             
-            else:
-               
-               aux = stringB[i - 1]
-               stringB[i - 1] = stringB[i]
-               stringB[i] = aux
-
+            # aux = antepenúltima
+            aux = stringB[i - 2]
+            # antepenúltima = penúltima
+            stringB[i - 2] = stringB[i - 1]
+            # penúltima = antepenúltima
+            stringB[i - 1] = aux
+         else:
+            aux = stringB[i - 1]
+            stringB[i - 1] = stringB[i]
+            stringB[i] = aux
 
    result = ""
    for a in range(len(stringB)):
       result += stringB[a]
    
-   return print(stringB), print(result)
+   print(name), print(stringB), print(result)
+   
+   #return result
    
 
-menor_string_maior("ab")
+menor_string_maior("dd")
