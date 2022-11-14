@@ -46,6 +46,7 @@ def shuffle_musicas(musicas_tocadas):
          result.append(musicas[i])
          result.append(musicas[size])
          size -= 1
+         
    # print(result)
    return result
 

@@ -70,6 +70,5 @@ def menor_string_maior(name):
    print(name), print(stringB), print(result)
    
    #return result
-   
 
 menor_string_maior("dd")

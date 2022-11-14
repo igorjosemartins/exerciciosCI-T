@@ -51,6 +51,7 @@ def calcula_porcentagem_sorteio(assinante, minutos_assistidos):
             porcentagem.append(chance)
             break
       
+      
    total = 0
    for i in range (len(porcentagem)):
       total += porcentagem[i]

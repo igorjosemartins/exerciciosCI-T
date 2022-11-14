@@ -21,6 +21,7 @@ function checaNumeroEscondido(numero, numeroOculto) {
   // Itera sobre o número oculto que agora é um array e pergunta para o array
   // se os elementos do número oculto estão presentes no array
   arraynumeroOculto.forEach(function (item) {
+    
     // O indexOf retorna -1 se não encontrar o elemento
     // a busca é sempre da esquerda para a direita
     arrayNumero = arrayNumero.slice(ultimoIndex)

@@ -19,4 +19,5 @@ def calcula_total_leds(altura, largura):
 
    return vertices
 
+
 calcula_total_leds(0, 1203)

@@ -30,5 +30,6 @@ function ultimaParada(combustivel, consumoMedio, postos) {
       maisDistante = postos[i]
     }
   }
+  
   return maisDistante
 }
